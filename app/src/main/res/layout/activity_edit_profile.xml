@@ -21,6 +21,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/user"
+            android:drawableTint="#000"
             android:drawablePadding="10dp"
             android:hint="Name" />
 
@@ -30,6 +31,7 @@
             android:layout_marginTop="3dp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/call"
+            android:drawableTint="#000"
             android:drawablePadding="10dp"
             android:hint="Phone number"
             android:inputType="textPassword" />
@@ -39,6 +41,7 @@
             android:layout_marginTop="3dp"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/home"
+            android:drawableTint="#000"
             android:drawablePadding="10dp"
             android:hint="Age"
             android:inputType="number" />
@@ -47,6 +50,7 @@
             android:layout_width="350dp"
             android:layout_marginTop="3dp"
             android:layout_height="wrap_content"
+            android:drawableTint="#000"
             android:drawableLeft="@drawable/address"
             android:drawablePadding="10dp"
             android:hint="Address" />
