@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hackumass.med.redhacks.HomeActivity">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="350dp"
+            android:focusableInTouchMode="false"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/user"
+            android:drawableTint="#000"
+            android:drawablePadding="10dp"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="350dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/call"
+            android:drawableTint="#000"
+            android:drawablePadding="10dp"
+            android:hint="Phone number"
+            android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="350dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/home"
+            android:drawableTint="#000"
+            android:drawablePadding="10dp"
+            android:hint="Age"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="350dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:drawableTint="#000"
+            android:drawableLeft="@drawable/address"
+            android:drawablePadding="10dp"
+            android:hint="Locations visited usually" />
+
+        <EditText
+            android:id="@+id/shake"
+            android:layout_width="350dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:drawableTint="#000"
+            android:drawableLeft="@drawable/shake"
+            android:drawablePadding="10dp"
+            android:hint="Shaking Intensity" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="350dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:drawableTint="#000"
+            android:drawableLeft="@drawable/message"
+            android:drawablePadding="10dp"
+            android:hint="Add your emergency message" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/button"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

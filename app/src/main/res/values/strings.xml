@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RedHacks</string>
+    <string name="title_activity_notif">NotifActivity</string>
 </resources>

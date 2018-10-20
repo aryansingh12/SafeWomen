@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     double lng;
     FusedLocationProviderClient client;
     LocationCallback callback;
+    CardView bankcardId,messaging,notif;
 
     @Override
     protected void onStart() {
@@ -78,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bankcardId = findViewById(R.id.bankcardId);
+        messaging = findViewById(R.id.messaging);
+        notif = findViewById(R.id.notif);
 
         Sensey.getInstance().init(this);
         ShakeDetector.ShakeListener shakeListener = new ShakeDetector.ShakeListener() {
@@ -133,6 +138,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        bankcardId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,PhoneActivity.class);
+                startActivity(i);
+            }
+        });
+        messaging.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,MessagingActivity.class);
+                startActivity(i);
+            }
+        });
+        getSupportActionBar().setTitle("Home");
     }
 
 
@@ -158,6 +178,16 @@ public class MainActivity extends AppCompatActivity {
         intent.setAction(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT,"abcd");
+        startActivity(intent);
+
+    }
+
+    public void aboutUs(View view){
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        Uri uri = Uri.parse("https://cityofithaca.org/234/Ithaca-Police-Department");
+        intent.setData(uri);
         startActivity(intent);
 
     }

@@ -1,16 +1,16 @@
 package com.hackumass.med.redhacks;
 
 import android.database.Cursor;
-import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PhoneActivity extends AppCompatActivity {
+public class MessagingActivity extends AppCompatActivity {
 
     ListView list;
     ArrayList<HashMap<String, String>> al = new ArrayList<HashMap<String,String>>();
@@ -18,11 +18,10 @@ public class PhoneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phone);
-        getSupportActionBar().setTitle("Select your caller");
+        setContentView(R.layout.activity_messaging);
+        getSupportActionBar().setTitle("Select people to message");
 
         list = (ListView) findViewById(R.id.list);
-
 
         Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
 
