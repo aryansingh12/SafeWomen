@@ -26,17 +26,23 @@ public class OpenHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String user_table = "CREATE TABLE " + Contract.User.TABLE_NAME +  " ( " +
-                Contract.User.COLUMN_ID +  " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Contract.User.COLUMN_MEDICATIONS + " TEXT, " +
-                Contract.User.COLUMN_SYMPTOMS + " TEXT, " +
-                Contract.User.COLUMN_PAIN + " INTEGER DEFAULT 0, " +
-                Contract.User.COLUMN_ALCOHOL + " INTEGER DEFAULT 0, " +
-                Contract.User.COLUMN_DATE + " TEXT, " +
-                Contract.User.COLUMN_SMOKING + " INTEGER DEFAULT 0 " +
+        String user_table = "CREATE TABLE " + Contract.Alarms.TABLE_NAME +  " ( " +
+                Contract.Alarms.TIME_MILLIS + " LONG DEFAULT 0, " +
+                " )";
+
+        String caller = "CREATE TABLE " + Contract.Caller.TABLE_NAME +  " ( " +
+                Contract.Caller.COLUMN_NAME + " TEXT, " +
+                Contract.Caller.COLUMN_PHONE + " INTEGER DEFAULT 0, " +
+                " )";
+
+        String messenger = "CREATE TABLE " + Contract.Messenger.TABLE_NAME +  " ( " +
+                Contract.Messenger.COLUMN_NAME + " TEXT, " +
+                Contract.Messenger.COLUMN_PHONE + " INTEGER DEFAULT 0, " +
                 " )";
 
         db.execSQL(user_table);
+        db.execSQL(caller);
+        db.execSQL(messenger);
     }
 
     @Override

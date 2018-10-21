@@ -1,6 +1,7 @@
 package com.hackumass.med.redhacks;
 
 import android.Manifest;
+import android.app.Notification;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -152,6 +153,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        notif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,NotifActivity.class);
+                startActivity(i);
+            }
+        });
+
         getSupportActionBar().setTitle("Home");
     }
 

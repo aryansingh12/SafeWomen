@@ -7,21 +7,20 @@ package com.hackumass.med.redhacks.Database;
 
 public class Contract {
 
-    public class User{
+    public class Alarms{
         // THESE ARE NAMES OF COLUMNS
-        public static final String TABLE_NAME = "user_only";
-        public static final String COLUMN_ID = "id";
-        public static final String COLUMN_SMOKING = "smoking";
-        public static final String COLUMN_ALCOHOL = "drinking";
-        public static final String COLUMN_PAIN = "pain";
-        public static final String COLUMN_DATE = "date";
-        public static final String COLUMN_MEDICATIONS = "medications";
-        public static final String COLUMN_SYMPTOMS = "conditions";
-
+        public static final String TABLE_NAME = "alarms";
+        public static final String TIME_MILLIS = "time";
     }
 
-    public class Contacts{
-        public static final String TABLE_NAME = "contacts";
+    public class Caller{
+        public static final String TABLE_NAME = "callers";
+        public static final String COLUMN_NAME = "name";
+        public static final String COLUMN_PHONE = "number";
+    }
+
+    public class Messenger{
+        public static final String TABLE_NAME = "messenger";
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_PHONE = "number";
     }

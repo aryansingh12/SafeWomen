@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +50,12 @@
         <activity
             android:name=".NotifActivity"
             android:label="@string/title_activity_notif"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
     </application>
 
 </manifest>

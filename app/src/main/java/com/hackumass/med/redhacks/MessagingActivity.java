@@ -19,7 +19,7 @@ public class MessagingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messaging);
-        getSupportActionBar().setTitle("Select people to message");
+        getSupportActionBar().setTitle("Select your messenger");
 
         list = (ListView) findViewById(R.id.list);
 

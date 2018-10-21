@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.hackumass.med.redhacks.NotifActivity"
+    android:layout_margin="20dp"
     tools:showIn="@layout/activity_notif">
 
-</android.support.constraint.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/alarm"
+            android:layout_width="match_parent"
+            android:hint="Set your alarm"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Repeat after every 24 hrs"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <Switch
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
